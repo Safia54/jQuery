@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery exo 3.3</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<p> <strong>Exercice 3 : </strong> 
+		Construisez une page html avec un bouton et un champ texte. Le but est de trouver un nombre entre 0 et 100. A chaque réponse la page répond :
+		- plus
+		- moins
+		- correct
+	
+		Quand la réponse est trouvée, on obtient le nombre d'essai que l'on a fait.
+	</p>
+	<form method="post">
+		<button> valider </button>
+		<input type="number" value="">
+	</form>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+
+	<script> 
+	let reponse = Math.round(Math.random() * 100);
+	// let essai = count(click());
+	let entree = $_POST['value'];
+
+	console.log(entree);
+
+	if(entree < reponse ) {
+
+		$('button').click(function(){
+			alert("c'est plus ! ");
+		});
+
+	}
+
+	else if(entree > reponse ) {
+		$('button').click(function(){
+			alert("c'est moins ! ");
+		});
+	}
+
+
+	else if(entree == reponse ) {
+		$('button').click(function(){
+			alert("c'est correct ! Tu as trouvé en " + essai +" essais.");
+		});
+	}
+
+	</script>
+
+</body>
+</html>

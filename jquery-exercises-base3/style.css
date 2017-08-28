@@ -1,0 +1,10 @@
+#rectangle{
+	width: 400px;
+	height: 200px;
+	border: 1px solid black;
+}
+#carre {
+	width: 200px;
+	height: 200px;
+	border: 1px solid black;
+}

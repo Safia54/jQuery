@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery exo 3.1</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<p> <strong>Exercice 1 : </strong>  Construisez une page html avec un bouton et un 
+		champ texte dans lequel on affiche le nombre de clics sur le bouton.
+	</p>
+	<button> clic </button>
+	<input type="text" value="0" disabled>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+	<script> 
+		
+			for (var i = 0; i < 1; i++) {
+				$('button').click(function(){
+					$('input').attr('value', i++);
+				});
+			}
+		
+		
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery exo 3.2</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	
+	<p><strong>Exercice 2 : </strong> 
+		Construisez une page html avec un bouton "+", un bouton "-" et un champ texte dans lequel on augmente ou baisse le chiffre en fonction des boutons cliqués.
+	</p>
+	<button id="plus"> + </button>
+	<button id="moins"> - </button>
+	<input type="text" value="0" disabled>
+
+	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+	<script> 
+//essai 3
+	let conteur = 0;
+
+ 	$('#plus').click(function(){
+ 		conteur++; // conteur = conteur + 1
+		$('input').attr('value',conteur);
+			});
+
+ 	$('#moins').click(function(){
+ 		conteur--;
+		$('input').attr('value',conteur);
+			});
+
+// essai 2
+ 	// 	let conteur = 1;
+
+ 	// $('#plus').click(function(){
+		// $('input').attr('value',conteur++);
+		// 	});
+
+ 	// $('#moins').click(function(){
+		// $('input').attr('value',conteur--);
+		// 	});
+
+//essai 1
+		// for (var i = 0; i < 1; i++) {
+		// 	$('#plus').click(function(){
+		// 		$('input').attr('value', i++);
+		// 	});
+		// }		
+
+		// for (var i = 0; i < 1; i++) {
+		// 	$('#moins').click(function(){
+		// 		$('input').attr('value', i--);
+		// 	});
+		// }
+
+	</script>
+
+</body>
+</html>
