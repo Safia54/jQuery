@@ -13,14 +13,27 @@
 		BONUS : Quand le bloc atteint un bord de la page, il doit réaparaître de l'autre côté.
 	</p>
 
-	 <div id="carre"> </div>
-	 <input type="text" size = "55" disabled value="appuie sur une touche de direction et le carré se déplacera">
+	<form>
+		 <div id="carre"> </div>
+		 <input type="text" size = "55"  value="appuie sur une touche de direction et le carré se déplacera">
+	</form>
 
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 	<script> 
 		
+		$(function(){
+
+			$('#carre').keypress(function(event){
+				if (event.which == 39) {
+					// event.preventDefault();
+					var droite = $('#carre').css("margin-left","0");
+					$('#carre').css("margin-left", "200px");
+				}
+			});
+
+		});
 
 	</script>
 

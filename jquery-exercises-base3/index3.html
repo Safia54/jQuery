@@ -15,41 +15,52 @@
 	
 		Quand la réponse est trouvée, on obtient le nombre d'essai que l'on a fait.
 	</p>
-	<form method="post">
+
 		<button> valider </button>
 		<input type="number" value="">
-	</form>
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 
 	<script> 
 	let reponse = Math.round(Math.random() * 100);
-	// let essai = count(click());
-	let entree = $_POST['value'];
+	let essai = 0;
+	let entree = "";
 
-	console.log(entree);
+	$('button').click(function(){
 
-	if(entree < reponse ) {
+		entree = $('input').val();
+			console.log(entree);
 
-		$('button').click(function(){
-			alert("c'est plus ! ");
-		});
-
-	}
-
-	else if(entree > reponse ) {
-		$('button').click(function(){
-			alert("c'est moins ! ");
-		});
-	}
+	});
 
 
-	else if(entree == reponse ) {
-		$('button').click(function(){
-			alert("c'est correct ! Tu as trouvé en " + essai +" essais.");
-		});
-	}
+	console.log(reponse);
+
+
+
+$('button').click(function(){
+		
+
+		if(entree > reponse ) {
+			alert("C'est moins ! ");
+			essai++;
+		}
+
+		if(entree  < reponse ) {
+			alert("C'est plus ! ");
+			essai++;
+		}
+
+		if(entree == reponse ) {
+			essai++;
+			alert("C'est correct ! Tu as trouvé en " + essai + " essais.");
+
+		}
+
+
+});
 
 	</script>
 

@@ -17,7 +17,7 @@
 		- Bouton 5 : fait réaparaître le rectangle 
 	</p>
 
-	 <div id="rectangle"></div>
+	 <div id="rectangle"> </div>
 
 	 <button> Agrandir </button> 
 	 <button> Vert </button> 
@@ -29,7 +29,45 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
 	<script> 
-		
+
+
+		$(function(){
+				
+				$('button:first-of-type').click(function(){
+					var h = $('#rectangle').height();
+					$('#rectangle').height(h+10);
+
+					if(h == 100) {
+						$('#rectangle').height(10);
+					}					
+				});
+
+
+				
+				$('button:nth-of-type(2)').click(function(){
+					$('#rectangle').css('background-color','green');					
+				});
+
+
+
+
+				$('button:nth-of-type(3)').click(function(){
+					$('#rectangle').css('background-color','white');
+				});
+
+
+
+				$('button:nth-of-type(4)').click(function(){
+					$('#rectangle').hide();
+				});
+
+
+				$('button:nth-of-type(5)').click(function(){
+					$('#rectangle').show();
+				});
+
+
+		});
 
 	</script>
 
